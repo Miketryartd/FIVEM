@@ -8,8 +8,9 @@ dotenv.config();
 //var
 var mongodb_uri = process.env.MONGODB_URI;
 
-//cors
+//cors & global stuff
 const app = express();
+app.use(express.json());
 app.use(cors());
 
 //mongoose

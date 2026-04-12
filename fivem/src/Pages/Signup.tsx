@@ -8,6 +8,7 @@ function Signup(){
     const [middleName, setMiddleName] = useState<string>("");
     const [lastName, setLastName] = useState<string>("");
     const [suffix, setSuffix] = useState<string>("");
+    const [birthdate, setBirhdate] = useState<string>("");
     const [email, setEmail] = useState<string>();
     const [address, setAddress] = useState<string >("");
     const [contact, setContact] = useState<string >("");
@@ -18,7 +19,7 @@ function Signup(){
                   event.preventDefault();
 
 
-                  if (!firstName || !middleName || !lastName || !suffix || !email || !address || !contact || !password) return alert("Fill out form");
+                  if (!firstName || !middleName || !lastName || !suffix || !email || !address || !contact || !password || !birthdate) return alert("Fill out form");
 
                   try{
 
@@ -27,6 +28,7 @@ function Signup(){
                         middleName: middleName,
                         lastName: lastName,
                         suffix: suffix,
+                        birthdate: birthdate,
                         email: email,
                         address: address,
                         contact: contact,
@@ -70,6 +72,8 @@ function Signup(){
                        <input type="text" 
                     placeholder="Suffix"
                     onChange={(e) => setSuffix(e.target.value)}></input>
+                    <input type="date" placeholder="Birthdate"
+                    onChange={(e) => setBirhdate(e.target.value)}></input>
                    </div>
 
                   <div>
